@@ -1,0 +1,36 @@
+{
+  "name": "statblock5e",
+  "version": "1.0.0",
+  "description": "A web component for D&D 5E statblocks.",
+  "main": "index.js",
+  "repository": "https://github.com/Valloric/statblock5e.git",
+  "author": "jespermb <jesper@adapt.dk>",
+  "contributors": [
+    "Val Markovic <val@markovic.io> (http://val.markovic.io)"
+  ],
+  "keywords": [
+    "D&D",
+    "D&D5e",
+    "web component"
+  ],
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@octokit/rest": "^14.0.8",
+    "chalk": "^2.3.0",
+    "clear": "0.0.1",
+    "clui": "^0.3.6",
+    "configstore": "^3.1.1",
+    "express": "^4.16.2",
+    "figlet": "^1.2.0",
+    "inquirer": "^5.1.0",
+    "lodash": "^4.17.5",
+    "minimist": "^1.2.0",
+    "pug": "^2.0.0-rc.4",
+    "readdirp": "^2.1.0",
+    "simple-git": "^1.89.0",
+    "touch": "^3.1.0"
+  },
+  "bin": {
+    "stat-block": "bin/createStatBlock.js"
+  }
+}
