@@ -12,6 +12,7 @@ module.exports = {
 
     const data = {
       title: answers.name,
+      layout: answers.layout,
       statblock: {
         creatureheading: {
           title: answers.name,
@@ -25,11 +26,12 @@ module.exports = {
     const folder = './creatures';
     const fileName = answers.name + '.json';
     const file = _.indexOf(fs.readdirSync(folder), fileName);
+    let output = JSON.stringify(data);
     if (file !== -1) {
-      fs.writeFileSync(folder + '/' + fileName, data);
+      fs.writeFileSync(folder + '/' + fileName, output);
     } else {
       touch(folder + fileName);
-      fs.writeFileSync(folder + '/' + fileName, data);
+      fs.writeFileSync(folder + '/' + fileName, output);
     }
   },
 }

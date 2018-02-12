@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "A web component for D&D 5E statblocks.",
   "main": "index.js",
-  "repository": "https://github.com/Valloric/statblock5e.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jespermb/statblock5e.git"
+  },
   "author": "jespermb <jesper@adapt.dk>",
   "contributors": [
     "Val Markovic <val@markovic.io> (http://val.markovic.io)"
@@ -32,5 +35,13 @@
   },
   "bin": {
     "stat-block": "bin/createStatBlock.js"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "bugs": {
+    "url": "https://github.com/jespermb/statblock5e/issues"
+  },
+  "homepage": "https://github.com/jespermb/statblock5e#readme",
+  "devDependencies": {}
 }

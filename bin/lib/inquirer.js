@@ -14,6 +14,12 @@ module.exports = {
     }
     const questions = [
       {
+        name: 'layout',
+        type: 'list',
+        message: 'Will this creature be in one or two columns?',
+        choices: ["1 Column", "2 Columns"]
+      },
+      {
         name: 'name',
         type: 'input',
         message: 'Enter the name of your creature',
@@ -41,7 +47,7 @@ module.exports = {
         name: 'alignment',
         type: 'input',
         message: 'Enther the creature alignment',
-        default: argv._[3] || 'unaligned'
+        default: argv._[4] || 'unaligned'
       },
       {
         name: 'ac',

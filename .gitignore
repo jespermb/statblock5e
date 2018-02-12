@@ -1,5 +1,6 @@
 .cache
 node_modules/
 creatures/*
-!creatures/demo.html
+!creatures/AnimatedArmorDemo.json
+!creatures/WerewolfAlphaDemo.json
 dist/

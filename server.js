@@ -20,11 +20,16 @@ var allFilePaths = [];
 readdirp(settings)
     .on('data', function (entry) {
         let page = {};
-        page.name = entry.name;
-        page.path = '/creatures/' + entry.name;
-        app.get('/creatures/' + entry.name, (req, res) => {
-            res.render('creature', page)
-        })
+        let name = entry.name.split('.')[0];
+        page.name = name;
+        page.path = '/creatures/' + name;
+        fs.readFile(entry.fullPath, 'utf8', function(err, data) {
+            if (err) throw err;
+            app.get('/creatures/' + name, (req, res) => {
+                let _data = JSON.parse(data);
+                res.render('creature', _data)
+            })
+        });
         allFilePaths.push(page);
     })
     .on('warn', function(warn){
